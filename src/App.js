@@ -30,12 +30,10 @@ function App() {
     await updateDoc(userDoc, newFields)
   }
 
-  const deleteUser = async (id) => {
+  const deleteUser2 = async (id) => {
     const userDoc = doc(db, "users", id)
     await deleteDoc(userDoc)
   }
-
-
 
   return (
     <div className="App">
@@ -48,7 +46,7 @@ function App() {
             <h1>Name: {user.name}</h1>
             <h1>Age: {user.age}</h1>
             <button onClick={() => updateUser(user.id, user.age)}>Increase Age</button>
-            <button onClick={() => deleteUser(user.id)}>Delete User</button>
+            <button onClick={() => deleteUser2(user.id)}>Delete User</button>
           </div>
         )
       })}
